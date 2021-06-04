@@ -23,7 +23,6 @@ function createFeatures(earthquakeData) {
 
   // Create a GeoJSON layer that contains the features array on the earthquakeData object.
   // Run the onEachFeature function once for each piece of data in the array.
-
     var earthquakes = L.geoJSON(earthquakeData, {
         onEachFeature: onEachFeature,
         pointToLayer: createMarker
@@ -58,7 +57,7 @@ var topo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
 //Creatng a map object
 var myMap = L.map("map", {
     center: [37.09, -95.71],
-    zoom: 11,
+    zoom: 3,
     layers: [street, topo, earthquakes]
     
 });
