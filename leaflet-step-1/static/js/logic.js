@@ -17,8 +17,8 @@ function createFeatures(earthquakeData) {
     function onEachFeature(features, layer){
         layer.bindPopup("<h3>" + features.properties.place + 
         "</h3><hr><p>" + new Date(features.properties.time) + 
-        "</h3><hr><p>" + "Magnitude: " + features.properties.mag +"</p>" + 
-        "</h3><hr><p>" + "Depth: " + features.geometry.coordinates[2] + "</p>");
+        "</h3><hr><p>" + new Date(features.properties.mag) +"</p>" + 
+        "</h3><hr><p>" + new Date(features.geometry.coordinates[2]) + "</p>");
     }
 
   // Create a GeoJSON layer that contains the features array on the earthquakeData object.
